@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * Theme override for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+<form{{ attributes.addClass('search-form') }}>
+    {#{{ children }}
+</form>
+<form action="#" class="search-form" data-drupal-form-fields="">#}
+    <div class="form-group">
+        <span class="icon icon-search"></span>
+        {#<input type="text" class="form-control" placeholder="Type a keyword and hit enter">#}
+        <input type="text" class="form-control" placeholder="Type a keyword and hit enter"
+               data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" value="" size="30"
+               maxlength="255" class="form-search"/>
+    </div>
+</form>

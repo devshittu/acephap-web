@@ -1,0 +1,61 @@
+{#
+/**
+ * @file
+ * Bootstrap Barrio's theme implementation for a branding block.
+ *
+ * Each branding element variable (logo, name, slogan) is only available if
+ * enabled in the block configuration.
+ *
+ * Available variables:
+ * - site_logo: Logo for site as defined in Appearance or theme settings.
+ * - site_name: Name for site as defined in Site information settings.
+ * - site_slogan: Slogan for site as defined in Site information settings.
+ */
+#}
+{% set attributes = attributes.addClass('col-md-4 order-md-1 d-flex topper mb-md-0 mb-2 align-items-center text-md-right site-branding') %}
+
+<div{{ attributes }}>
+
+  {#<div class="pr-md-4 pl-md-0 pl-3 text">#}
+  {% if site_logo or site_name %}
+    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="navbar-brand">
+      {% if site_logo %}
+        {#<img src="{{ site_logo }}" alt="{{ 'Home'|t }}" width="482" />#}
+        <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" width="120" />
+      {% endif %}
+      {{ site_name }}
+    </a>
+  {% endif %}
+  {% if site_slogan %}
+    <div class="d-inline-block align-top site-name-slogan">
+      {{ site_slogan }}
+    </div>
+  {% endif %}
+  {#</div>#}
+</div>
+
+
+{#
+{% if site_logo or site_name %}
+    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="navbar-brand">
+      {% if site_logo %}
+        <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" class="img-fluid d-inline-block align-top" />
+      {% endif %}
+      {{ site_name }}
+    </a>
+  {% endif %}
+  {% if site_slogan %}
+    <div class="d-inline-block align-top site-name-slogan">
+      {{ site_slogan }}
+    </div>
+  {% endif %}
+
+            <div class="col-md-4 order-md-1 d-flex topper mb-md-0 mb-2 align-items-center text-md-right">
+
+                <div class="pr-md-4 pl-md-0 pl-3 text">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="./images/acephap-all-solid_2.svg" width="482" height="119">
+                    </a>
+                </div>
+            </div>
+#}

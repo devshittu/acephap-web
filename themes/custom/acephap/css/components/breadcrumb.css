@@ -1,0 +1,104 @@
+/* --------------------------------
+
+Basic Style
+
+-------------------------------- */
+.acephap-breadcrumb, .acephap-multi-steps {
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+.acephap-breadcrumb::after, .acephap-multi-steps::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.acephap-breadcrumb li, .acephap-multi-steps li {
+    display: inline-block;
+    float: left;
+    margin: 0.5em 0;
+}
+.acephap-breadcrumb li::after, .acephap-multi-steps li::after {
+    /* this is the separator between items */
+    display: inline-block;
+    content: '\00bb';
+    margin: 0 .6em;
+    color: #FFF;
+}
+.acephap-breadcrumb li:last-of-type::after, .acephap-multi-steps li:last-of-type::after {
+    /* hide separator after the last item */
+    display: none;
+}
+.acephap-breadcrumb li > *, .acephap-multi-steps li > * {
+    /* single step */
+    display: inline-block;
+    /*font-size: 1.4rem;*/
+    color: #2c3f4c;
+}
+.acephap-breadcrumb li a, .acephap-multi-steps li a {
+    color: #FFFFFF;
+}
+.acephap-breadcrumb li.current > *, .acephap-multi-steps li.current > * {
+    /* selected step */
+    color: #96c03d;
+}
+.no-touch .acephap-breadcrumb a:hover, .no-touch .acephap-multi-steps a:hover {
+    /* steps already visited */
+    color: #96c03d;
+}
+.acephap-breadcrumb.custom-separator li::after, .acephap-multi-steps.custom-separator li::after {
+    /* replace the default separator with a custom icon */
+    content: '';
+    height: 16px;
+    width: 16px;
+    background: url(https://codyhouse.co/demo/breadcrumbs-multi-steps-indicator/img/cd-custom-separator.svg) no-repeat center center;
+    vertical-align: middle;
+}
+.acephap-breadcrumb.custom-icons li > *::before, .acephap-multi-steps.custom-icons li > *::before {
+    /* add a custom icon before each item */
+    content: '';
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin-right: .4em;
+    margin-top: -2px;
+    background: url(https://codyhouse.co/demo/breadcrumbs-multi-steps-indicator/img/cd-custom-icons-01.svg) no-repeat 0 0;
+    vertical-align: middle;
+}
+.acephap-breadcrumb.custom-icons li:not(.current):nth-of-type(2) > *::before, .acephap-multi-steps.custom-icons li:not(.current):nth-of-type(2) > *::before {
+    /* change custom icon using image sprites */
+    background-position: -20px 0;
+}
+.acephap-breadcrumb.custom-icons li:not(.current):nth-of-type(3) > *::before, .acephap-multi-steps.custom-icons li:not(.current):nth-of-type(3) > *::before {
+    background-position: -40px 0;
+}
+.acephap-breadcrumb.custom-icons li:not(.current):nth-of-type(4) > *::before, .acephap-multi-steps.custom-icons li:not(.current):nth-of-type(4) > *::before {
+    background-position: -60px 0;
+}
+.acephap-breadcrumb.custom-icons li.current:first-of-type > *::before, .acephap-multi-steps.custom-icons li.current:first-of-type > *::before {
+    /* change custom icon for the current item */
+    background-position: 0 -20px;
+}
+.acephap-breadcrumb.custom-icons li.current:nth-of-type(2) > *::before, .acephap-multi-steps.custom-icons li.current:nth-of-type(2) > *::before {
+    background-position: -20px -20px;
+}
+.acephap-breadcrumb.custom-icons li.current:nth-of-type(3) > *::before, .acephap-multi-steps.custom-icons li.current:nth-of-type(3) > *::before {
+    background-position: -40px -20px;
+}
+.acephap-breadcrumb.custom-icons li.current:nth-of-type(4) > *::before, .acephap-multi-steps.custom-icons li.current:nth-of-type(4) > *::before {
+    background-position: -60px -20px;
+}
+@media only screen and (min-width: 768px) {
+    .acephap-breadcrumb, .acephap-multi-steps {
+        padding: 0 1.2em;
+    }
+    .acephap-breadcrumb li, .acephap-multi-steps li {
+        margin: 1.2em 0;
+    }
+    .acephap-breadcrumb li::after, .acephap-multi-steps li::after {
+        margin: 0 1em;
+    }
+    .acephap-breadcrumb li > *, .acephap-multi-steps li > * {
+        /*font-size: 1.6rem;*/
+    }
+}

@@ -1,0 +1,14 @@
+
+
+.hero-wrap.hero-wrap-2 {
+    background: url('../../images/bg_1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.acephap-animate {
+    opacity: 1;
+    visibility: visible;
+}

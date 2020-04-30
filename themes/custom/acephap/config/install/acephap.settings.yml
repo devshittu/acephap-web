@@ -1,0 +1,33 @@
+# Library
+# --------------
+acephap_library: 'production'
+# Layout
+# --------------
+acephap_sidebar_position: 'both'
+acephap_content_offset: 0
+acephap_sidebar_first_width: 4
+acephap_sidebar_first_offset: 0
+acephap_sidebar_second_width: 3
+acephap_sidebar_second_offset: 0
+
+# Container
+# --------------
+acephap_fluid_container: 1
+
+# Buttons
+# --------------
+acephap_button: 1
+acephap_button_size: ''
+acephap_button_outline: 0
+
+# Navbar
+# --------------
+acephap_navbar_toggle: 1
+acephap_navbar_container: 'navbar-toggleable-md'
+acephap_navbar_top_position: ''
+acephap_navbar_top_color: 'navbar-light'
+acephap_navbar_position: ''
+acephap_navbar_color: 'navbar-light'
+# Colors
+# --------------
+acephap_table_hover: 1

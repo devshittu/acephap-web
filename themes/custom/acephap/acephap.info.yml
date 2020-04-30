@@ -1,0 +1,44 @@
+name: ACEPHAP Theme
+type: theme
+description: 'Basic structure for a ACEPHAP Center Theme.'
+
+base theme: false
+
+# Information added by Drupal.org packaging script on 2019-02-28
+version: '8.x-4.22'
+core: '8.x'
+
+libraries:
+# - acephap/bootstrap_cdn
+  - acephap/bootstrap
+  - acephap/poppins
+  - acephap/futura-pt
+  - acephap/work-sans
+  - acephap/global-css
+
+regions:
+  header: Header
+  navigation: 'Main navigation'
+  secondary_navigation: 'Secondary Navigation'
+  support_feature: 'Supporting Brand'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  front: 'Front Page'
+  front_events: 'Front Page Events Simple List'
+  front_press: 'Front Page News & Pub Simple List'
+  front_press_0: 'Front Page News & Pub #1'
+  front_press_1: 'Front Page News & Pub #2'
+  front_press_2: 'Front Page News & Pub #3'
+  front_our_team: 'Front Page Our Team'
+  highlighted: Highlighted
+  featured_top: 'Featured top'
+  breadcrumb: Breadcrumb
+  page_hero: 'Page Hero'
+  content: Content
+  sidebar_first: 'Sidebar Left'
+  sidebar_second: 'Sidebar Right'
+  footer_first: 'Footer first'
+  footer_second: 'Footer second'
+  footer_third: 'Footer third'
+  footer_fourth: 'Footer fourth'
+  footer_fifth: 'Footer fifth'
