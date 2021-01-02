@@ -131,6 +131,9 @@
 {% endblock %}
 <!-- END nav -->
 
+{% if page.front %}
+{% else %}
+
 {% if page.page_hero %}
 {#<section class="hero-wrap hero-wrap-2" style="background: url('./../../images/bg_1.jpg')" data-stellar-background-ratio="0.5">#}
 <section class="hero-wrap hero-wrap-2" data-stellar-background-ratio="0.5">
@@ -141,6 +144,7 @@
         </div>
     </div>
 </section>
+{% endif %}
 {% endif %}
 
 {% block content %}

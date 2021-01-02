@@ -5,6 +5,8 @@ bootstrap:
   js:
     /libraries/popper/popper.min.js: {}
     /libraries/bootstrap/js/bootstrap.min.js: {}
+  dependencies:
+    - core/jquery
   css:
     component:
       /libraries/bootstrap/css/bootstrap.min.css: {}
@@ -24,7 +26,7 @@ color.preview:
   js:
     color/preview.js: {}
   dependencies:
-  - color/drupal.color
+    - color/drupal.color
 
 futura-pt:
   license:
